@@ -1,0 +1,254 @@
+$myFont: Consolas, sans-serif;
+$pink: #ff99c8;
+$purple: #e4c1f9;
+$blue: #cffbff;
+$green: #d0f4de;
+
+html,
+body {
+    font-family: $myFont;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    min-width: 300px;
+    background-color: $purple;
+
+    h1 {
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    h2 {
+        font-size: 25px;
+        color: $blue;
+        font-weight: 100;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        font-weight: 800;
+    }
+    
+    p {
+        letter-spacing: 1px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+}
+
+
+/* NAVIGATION ITEMS */
+
+#nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: $pink;
+    transition: 0.2s;
+    height: 50px;
+}
+
+.logo-container {
+    display: grid;
+    width: 50%;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    -webkit-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#small-logo {
+    padding-top: 50px;
+    width: 100px;
+    height: 50px;
+    transform: translate(0px, -1000px);
+    -webkit-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+    grid-column: 1;
+    grid-row: 1;
+}
+/* MAIN NAV MENU ITEMS ARE NOT VISIBLE IN MOBILE VIEW. 
+THEY BECOME VISIBLE IN MEDIUM VIEW. THESE STYLES AFFECT THE 
+HAMBURGER ICON*/
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-end;
+    z-index: 9999;
+    width: 50%;
+    margin: 0;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li a {
+    display: none;
+}
+/* HAMBURGER NAVIGATION ITEMS */
+/* HAMBURGER ICON */
+
+#burger {
+    color: white;
+    font-size: 30px;
+    padding: 65px 15px 5px 15px;
+}
+
+#burger:hover {
+    color: $pink;
+}
+/* HAMBURGER MENU ITEMS */
+
+.burger-nav-container {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#burger-nav ul {
+    text-align: center;
+    list-style: none;
+    background-color: $pink;
+    padding: 0;
+}
+
+#burger-nav ul li {
+    padding: 8px 0 8px 0;
+    border-top: 1px solid white;
+}
+
+#burger-nav ul li a {
+    text-decoration: none;
+    color: $blue;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#burger-nav ul li a:hover {
+    color: $pink;
+}
+/*CLASS USED ONLY WHEN HAMBURGER MENU IS TOGGLED*/
+
+.hidden {
+    transform: translate(-999px, -18px);
+    -webkit-transition: all ease-in-out .9s;
+    transition: all ease-in-out .9s;
+}
+
+.show {
+    transform: translate(0px, -18px);
+    -webkit-transition: all ease-in-out .9s;
+    transition: all ease-in-out .9s;
+}
+/* PAGE CONTENT */
+
+#content-section {
+    padding: 150px 0 20px 0;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.name {
+    font-family: 'Lobster', cursive;
+    color: $pink;
+}
+/*CLASS USED ONLY WHEN HAMBURGER MENU IS TOGGLED*/
+
+.content-height-before {
+    margin-top: 0;
+    -webkit-transition: all ease-in-out .8s;
+    transition: all ease-in-out .8s;
+}
+/*CLASS USED ONLY WHEN HAMBURGER MENU IS TOGGLED*/
+
+.content-height-after {
+    margin-top: 100px;
+    -webkit-transition: all ease-in-out .8s;
+    transition: all ease-in-out .8s;
+}
+/* HOME PAGE CONTENT */
+
+.greeting-sentence {
+    padding-bottom: 30px;
+}
+
+.hero-img {
+    max-width: 100%;
+}
+
+.about-section {
+    padding-bottom: 30px;
+    margin: 15px;
+}
+/* CONTACT SECTION */
+
+.email-section {
+    border-top: solid 3px $pink;
+    padding: 50px 0 40px 0;
+    margin: 15px;
+    text-align: center;
+}
+
+.email-section button {
+    margin: 30px;
+    padding: 20px;
+    border: none;
+    color: #fff;
+    background-color: $blue;
+    font: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 7%;
+    -webkit-transition: background-color ease 1s;
+    transition: background-color ease 1s;
+}
+
+.email-section button:hover {
+    background-color: $pink;
+    -webkit-transition: background-color ease 1s;
+    transition: background-color ease 1s;
+}
+
+.media-icons {
+    margin: 20px 5px;
+}
+
+.media-icons a {
+    font-size: 50px;
+    color: $blue;
+    text-decoration: none;
+    -webkit-transition: color ease 1s;
+    transition: color ease 1s;
+    margin: 10px;
+}
+
+.media-icons a:hover {
+    color: $pink;
+    -webkit-transition: color ease 1s;
+    transition: color ease 1s;
+}
+
+footer p {
+    text-align: center;
+    font-size: 15px;
+}
